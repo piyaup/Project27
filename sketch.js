@@ -18,11 +18,11 @@ function setup() {
  
 	engine = Engine.create();
 	world = engine.world;
-    bob1 = new Bob(250,500,50);
-    bob2 = new Bob(300,500,50);
-    bob3 = new Bob(350,500,50);
-    bob4 = new Bob(400,500,50);
-    bob5 = new Bob(450,500,50);
+    bob1 = new Bob(250,500,50,1.2);
+    bob2 = new Bob(300,500,50,1.2);
+    bob3 = new Bob(350,500,50,1.2);
+    bob4 = new Bob(400,500,50,1.2);
+    bob5 = new Bob(450,500,50,1.2);
     roof = new Roof(350,200,350,20);
     rope1 = new Rope(bob1.body,{x:250,y:200});
     rope2 = new Rope(bob2.body,{x:300,y:200});
@@ -53,7 +53,7 @@ function draw() {
 
 function keyPressed() {
 	if(keyCode === UP_ARROW){
-        Matter.Body.applyForce(bob1.body,bob1.body.position,{x:-80,y:-80})
+        Matter.Body.applyForce(bob1.body,bob1.body.position,{x:-100,y:40})
 
     }
   }
